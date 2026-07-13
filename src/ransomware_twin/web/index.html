@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="color-scheme" content="dark">
+    <title>Enterprise Resilience Digital Twin</title>
+    <link rel="stylesheet" href="/assets/styles.css">
+  </head>
+  <body>
+    <main>
+      <header class="hero">
+        <div>
+          <p class="eyebrow">SAFE DISCRETE-EVENT SIMULATION</p>
+          <h1>Enterprise Resilience Digital Twin</h1>
+          <p class="lede">Measure blast radius, data survivability, and recovery before controls meet a real incident.</p>
+        </div>
+        <span class="status" id="health">CHECKING</span>
+      </header>
+
+      <section class="safety panel">
+        <strong>STATE TRANSITIONS ONLY</strong>
+        <span>No payload execution · no host-file encryption · no network egress</span>
+        <button id="run" type="button">Run controlled comparison</button>
+      </section>
+      <p class="error" id="error" role="alert" hidden></p>
+
+      <section class="headline-grid" aria-label="Before and after">
+        <article class="panel baseline">
+          <p class="eyebrow">FLAT BASELINE</p><h2 id="base-title">Awaiting simulation</h2>
+          <div class="big" id="base-touched">—</div><span>systems touched</span>
+          <dl id="base-metrics"></dl>
+        </article>
+        <div class="arrow" aria-hidden="true">→</div>
+        <article class="panel resilient">
+          <p class="eyebrow">LAYERED REFERENCE</p><h2 id="hard-title">Awaiting simulation</h2>
+          <div class="big" id="hard-touched">—</div><span>systems touched</span>
+          <dl id="hard-metrics"></dl>
+        </article>
+      </section>
+
+      <section class="panel">
+        <div class="section-heading">
+          <div><p class="eyebrow">CONTROL ABLATION</p><h2>Measured outcomes by architecture</h2></div>
+          <code id="digest">No functional digest yet</code>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>Profile</th><th>Touched</th><th>Encrypted</th><th>Confinement</th><th>Exfil</th><th>Lost</th><th>RTO/RPO</th><th>Blast</th><th>Score</th></tr></thead>
+            <tbody id="profile-body"><tr><td colspan="9">Run the comparison to populate evidence.</td></tr></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="grid">
+        <article class="panel">
+          <p class="eyebrow">ENTERPRISE MODEL</p><h2>Topology</h2>
+          <ul id="topology"><li>Loading integrity-pinned assets…</li></ul>
+        </article>
+        <article class="panel">
+          <p class="eyebrow">DEFENSE EVIDENCE</p><h2>Control effects</h2>
+          <ul id="controls"><li>Awaiting simulation…</li></ul>
+        </article>
+        <article class="panel wide">
+          <div class="section-heading"><div><p class="eyebrow">CAUSAL LEDGER</p><h2>Reference timeline</h2></div><span id="timeline-label"></span></div>
+          <div class="timeline" id="timeline">Awaiting simulation…</div>
+        </article>
+      </section>
+    </main>
+    <script src="/assets/app.js" defer></script>
+  </body>
+</html>

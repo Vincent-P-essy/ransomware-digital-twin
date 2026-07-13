@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "id": "immutable-backup-only",
+  "label": "Immutable backup only",
+  "description": "The baseline blast radius remains possible, but recovery points cannot be altered and use a shorter interval.",
+  "network_mode": "flat",
+  "least_privilege": false,
+  "immutable_backup": true,
+  "detection_enabled": false,
+  "detection_threshold": 1000,
+  "sensor_delay_seconds": 0,
+  "response_delay_seconds": 0,
+  "backup_interval_minutes": 15,
+  "unrecoverable_rpo_minutes": 480
+}
