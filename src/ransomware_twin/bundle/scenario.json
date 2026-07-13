@@ -1,0 +1,229 @@
+{
+  "version": "1.0",
+  "id": "meridian-ransomware-state-machine",
+  "title": "Controlled enterprise ransomware progression",
+  "description": "A declarative state-only progression through initial access, credential access, lateral movement, simulated data egress counters, impact flags, and recovery inhibition.",
+  "safety_invariant": "Only allowlisted in-memory state transitions are permitted; no command, payload, host-file mutation, or network egress exists.",
+  "actions": [
+    {
+      "id": "initial-finance-workstation",
+      "at_seconds": 0,
+      "stage": "initial-access",
+      "primitive": "initial_access",
+      "source_asset": null,
+      "target_asset": "ws-finance-01",
+      "path_id": null,
+      "volume_gb": 0,
+      "signal_score": 1
+    },
+    {
+      "id": "credential-scope-transition",
+      "at_seconds": 20,
+      "stage": "credential-access",
+      "primitive": "credential_access",
+      "source_asset": "ws-finance-01",
+      "target_asset": null,
+      "path_id": null,
+      "volume_gb": 0,
+      "signal_score": 1
+    },
+    {
+      "id": "move-finance-peer",
+      "at_seconds": 35,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "finance-peer",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-finance-shared",
+      "at_seconds": 50,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "finance-to-shared",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-finance-identity",
+      "at_seconds": 55,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "finance-to-idp",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-identity-hr",
+      "at_seconds": 70,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-hr",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-identity-ops",
+      "at_seconds": 75,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-ops",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-identity-dev",
+      "at_seconds": 80,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-dev",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-identity-exec",
+      "at_seconds": 85,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-exec",
+      "volume_gb": 0,
+      "signal_score": 2
+    },
+    {
+      "id": "move-identity-payroll-service",
+      "at_seconds": 90,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-payroll-api",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-identity-erp",
+      "at_seconds": 95,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-erp",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-identity-portal",
+      "at_seconds": 100,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-portal",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-identity-backup-control",
+      "at_seconds": 110,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-backup-control",
+      "volume_gb": 0,
+      "signal_score": 4
+    },
+    {
+      "id": "move-identity-siem",
+      "at_seconds": 115,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-siem",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-identity-response",
+      "at_seconds": 120,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "idp-to-response",
+      "volume_gb": 0,
+      "signal_score": 3
+    },
+    {
+      "id": "move-shared-payroll",
+      "at_seconds": 130,
+      "stage": "lateral-movement",
+      "primitive": "lateral_move",
+      "source_asset": null,
+      "target_asset": null,
+      "path_id": "shared-to-payroll",
+      "volume_gb": 0,
+      "signal_score": 4
+    },
+    {
+      "id": "egress-shared-counter",
+      "at_seconds": 160,
+      "stage": "exfiltration",
+      "primitive": "exfiltration_attempt",
+      "source_asset": null,
+      "target_asset": "fs-shared",
+      "path_id": null,
+      "volume_gb": 40,
+      "signal_score": 3
+    },
+    {
+      "id": "egress-payroll-counter",
+      "at_seconds": 170,
+      "stage": "exfiltration",
+      "primitive": "exfiltration_attempt",
+      "source_asset": null,
+      "target_asset": "fs-payroll",
+      "path_id": null,
+      "volume_gb": 60,
+      "signal_score": 4
+    },
+    {
+      "id": "impact-state-flags",
+      "at_seconds": 210,
+      "stage": "impact",
+      "primitive": "encrypt_impacted_assets",
+      "source_asset": null,
+      "target_asset": "compromised-assets",
+      "path_id": null,
+      "volume_gb": 0,
+      "signal_score": 5
+    },
+    {
+      "id": "recovery-point-state-change",
+      "at_seconds": 250,
+      "stage": "recovery-inhibition",
+      "primitive": "destroy_recovery_points",
+      "source_asset": "backup-control",
+      "target_asset": "backup-vault",
+      "path_id": null,
+      "volume_gb": 0,
+      "signal_score": 5
+    }
+  ]
+}

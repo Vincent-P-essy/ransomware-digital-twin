@@ -1,0 +1,13 @@
+{
+  "contract_version": "1.0",
+  "files": {
+    "catalog.json": "92c12358206ffeaa6ca1d8470c4e7847eb51180e9174fcd892bd950d81de82c8",
+    "topology.json": "7274751b6fbbd8e0b5d2d8d9d7c313dab269b7ec9abcc3127b4b4ad010e669bf",
+    "scenario.json": "79c0f9d333d73b5bd3ca4a9d5a8ca487721331fcb0a31267ee91deec71b98606",
+    "profiles/flat-baseline.json": "d4ac7e120015c41291f346d6de9108a7e8f20b7ae999ef83140506cf815e7ee0",
+    "profiles/immutable-backup-only.json": "10634e37ff5f7397c02a8448b05abbeefd964a9be9284e88f810b8516578bbda",
+    "profiles/least-privilege-only.json": "7ac9d4d921360c7e9bb56dcca7a7953c8ffc2346e727e5be736a760e1765b2a6",
+    "profiles/resilient-reference.json": "5e0cdf6759b8df475d594860ec4c8b4b2a1d311ed40256e05ee0fc70d34749a6",
+    "profiles/segmented-only.json": "de30f1f72cdd1c47e5ca7638adb5f3aae1d722b90affc0df267990b913cd324e"
+  }
+}

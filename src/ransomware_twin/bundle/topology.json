@@ -1,0 +1,322 @@
+{
+  "version": "1.0",
+  "name": "Synthetic Meridian Finance enterprise",
+  "description": "A sixteen-system deterministic enterprise twin spanning endpoints, identity, data, business services, security operations, and recovery.",
+  "assets": [
+    {
+      "id": "ws-finance-01",
+      "name": "Finance workstation 01",
+      "kind": "workstation",
+      "zone": "endpoints-finance",
+      "criticality": 2,
+      "data_gb": 5,
+      "data_class": "primary",
+      "restore_minutes": 10,
+      "rebuild_minutes": 45,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "ws-finance-02",
+      "name": "Finance workstation 02",
+      "kind": "workstation",
+      "zone": "endpoints-finance",
+      "criticality": 2,
+      "data_gb": 4,
+      "data_class": "primary",
+      "restore_minutes": 10,
+      "rebuild_minutes": 45,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "ws-hr-01",
+      "name": "Human resources workstation",
+      "kind": "workstation",
+      "zone": "endpoints-hr",
+      "criticality": 2,
+      "data_gb": 8,
+      "data_class": "primary",
+      "restore_minutes": 12,
+      "rebuild_minutes": 50,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "ws-ops-01",
+      "name": "Operations workstation",
+      "kind": "workstation",
+      "zone": "endpoints-ops",
+      "criticality": 2,
+      "data_gb": 3,
+      "data_class": "primary",
+      "restore_minutes": 10,
+      "rebuild_minutes": 45,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "ws-dev-01",
+      "name": "Developer workstation",
+      "kind": "workstation",
+      "zone": "endpoints-dev",
+      "criticality": 2,
+      "data_gb": 5,
+      "data_class": "primary",
+      "restore_minutes": 15,
+      "rebuild_minutes": 60,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "ws-exec-01",
+      "name": "Executive workstation",
+      "kind": "workstation",
+      "zone": "endpoints-exec",
+      "criticality": 3,
+      "data_gb": 6,
+      "data_class": "primary",
+      "restore_minutes": 15,
+      "rebuild_minutes": 60,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "idp-primary",
+      "name": "Primary identity service",
+      "kind": "identity",
+      "zone": "identity",
+      "criticality": 5,
+      "data_gb": 1,
+      "data_class": "system",
+      "restore_minutes": 30,
+      "rebuild_minutes": 240,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "fs-payroll",
+      "name": "Payroll file share",
+      "kind": "file-share",
+      "zone": "data",
+      "criticality": 5,
+      "data_gb": 120,
+      "data_class": "primary",
+      "restore_minutes": 90,
+      "rebuild_minutes": 720,
+      "encryptable": true,
+      "exfiltratable": true
+    },
+    {
+      "id": "fs-shared",
+      "name": "Corporate shared files",
+      "kind": "file-share",
+      "zone": "data",
+      "criticality": 4,
+      "data_gb": 80,
+      "data_class": "primary",
+      "restore_minutes": 60,
+      "rebuild_minutes": 480,
+      "encryptable": true,
+      "exfiltratable": true
+    },
+    {
+      "id": "payroll-api",
+      "name": "Payroll business service",
+      "kind": "business-service",
+      "zone": "business",
+      "criticality": 5,
+      "data_gb": 20,
+      "data_class": "primary",
+      "restore_minutes": 45,
+      "rebuild_minutes": 360,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "erp-api",
+      "name": "Enterprise resource planning service",
+      "kind": "business-service",
+      "zone": "business",
+      "criticality": 5,
+      "data_gb": 30,
+      "data_class": "primary",
+      "restore_minutes": 60,
+      "rebuild_minutes": 480,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "customer-portal",
+      "name": "Customer portal",
+      "kind": "business-service",
+      "zone": "dmz",
+      "criticality": 4,
+      "data_gb": 10,
+      "data_class": "primary",
+      "restore_minutes": 40,
+      "rebuild_minutes": 300,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "backup-control",
+      "name": "Backup control plane",
+      "kind": "backup-control",
+      "zone": "recovery",
+      "criticality": 5,
+      "data_gb": 0,
+      "data_class": "none",
+      "restore_minutes": 20,
+      "rebuild_minutes": 240,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "backup-vault",
+      "name": "Recovery vault",
+      "kind": "backup-vault",
+      "zone": "recovery",
+      "criticality": 5,
+      "data_gb": 291,
+      "data_class": "backup",
+      "restore_minutes": 120,
+      "rebuild_minutes": 960,
+      "encryptable": false,
+      "exfiltratable": false
+    },
+    {
+      "id": "siem",
+      "name": "Security analytics service",
+      "kind": "security-service",
+      "zone": "security",
+      "criticality": 4,
+      "data_gb": 2,
+      "data_class": "system",
+      "restore_minutes": 20,
+      "rebuild_minutes": 120,
+      "encryptable": true,
+      "exfiltratable": false
+    },
+    {
+      "id": "response-orchestrator",
+      "name": "Response orchestration service",
+      "kind": "security-service",
+      "zone": "security",
+      "criticality": 4,
+      "data_gb": 1,
+      "data_class": "system",
+      "restore_minutes": 15,
+      "rebuild_minutes": 90,
+      "encryptable": true,
+      "exfiltratable": false
+    }
+  ],
+  "paths": [
+    {
+      "id": "finance-peer",
+      "source": "ws-finance-01",
+      "target": "ws-finance-02",
+      "required_role": "user",
+      "segmented_allowed": true
+    },
+    {
+      "id": "finance-to-shared",
+      "source": "ws-finance-02",
+      "target": "fs-shared",
+      "required_role": "user",
+      "segmented_allowed": false
+    },
+    {
+      "id": "finance-to-idp",
+      "source": "ws-finance-01",
+      "target": "idp-primary",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-hr",
+      "source": "idp-primary",
+      "target": "ws-hr-01",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-ops",
+      "source": "idp-primary",
+      "target": "ws-ops-01",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-dev",
+      "source": "idp-primary",
+      "target": "ws-dev-01",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-exec",
+      "source": "idp-primary",
+      "target": "ws-exec-01",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-payroll-api",
+      "source": "idp-primary",
+      "target": "payroll-api",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-erp",
+      "source": "idp-primary",
+      "target": "erp-api",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-portal",
+      "source": "idp-primary",
+      "target": "customer-portal",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-backup-control",
+      "source": "idp-primary",
+      "target": "backup-control",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-siem",
+      "source": "idp-primary",
+      "target": "siem",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "idp-to-response",
+      "source": "idp-primary",
+      "target": "response-orchestrator",
+      "required_role": "admin",
+      "segmented_allowed": false
+    },
+    {
+      "id": "shared-to-payroll",
+      "source": "fs-shared",
+      "target": "fs-payroll",
+      "required_role": "admin",
+      "segmented_allowed": false
+    }
+  ],
+  "dependencies": [
+    {"service": "payroll-api", "depends_on": "idp-primary"},
+    {"service": "payroll-api", "depends_on": "fs-payroll"},
+    {"service": "erp-api", "depends_on": "idp-primary"},
+    {"service": "customer-portal", "depends_on": "idp-primary"},
+    {"service": "response-orchestrator", "depends_on": "siem"}
+  ]
+}

@@ -1,0 +1,11 @@
+{
+  "contract_version": "1.0",
+  "functional_sha256": "7f7897150704ccce3bd80ffc0492f2ab309eac5b4dc3143489831d57077ac30d",
+  "files": {
+    "comparison.json": "400fa19d1582984c4c740bf2d5c0124411f680384887a5192c54abf80e79f62b",
+    "events.jsonl": "4ab2e9d5c461b6f026435d4f04c0e6d4f15583c6c0e8bc911d9790b5ee9031d8",
+    "metrics.csv": "f37461d223251c81b6c73c739c1f26c1471b6a0ab7cef1e1afd3674a5763938e",
+    "report.md": "75dcfd9c3c484b7fbb60f9e5ceb61c18aef88e48a158e8d675b97c5191b6e00a"
+  },
+  "measurement_note": "Simulated incident time is deterministic; wall-clock execution time is environment-dependent and is not compared."
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "id": "segmented-only",
+  "label": "Segmentation only",
+  "description": "Zone allowlists constrain movement while privilege, mutable backups, and response remain unchanged.",
+  "network_mode": "segmented",
+  "least_privilege": false,
+  "immutable_backup": false,
+  "detection_enabled": false,
+  "detection_threshold": 1000,
+  "sensor_delay_seconds": 0,
+  "response_delay_seconds": 0,
+  "backup_interval_minutes": 60,
+  "unrecoverable_rpo_minutes": 480
+}

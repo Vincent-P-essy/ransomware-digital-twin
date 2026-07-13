@@ -1,0 +1,6 @@
+profile_id,network_mode,least_privilege,immutable_backup,detection_enabled,machines_touched,encrypted_assets,time_to_critical_compromise_seconds,time_to_confinement_seconds,exfiltrated_data_gb,data_lost_percent,rto_minutes,rpo_minutes,blast_radius_percent,weighted_blast_radius_percent,resilience_score
+flat-baseline,flat,False,False,False,15,15,50,,100.0,100.0,825,480,93.75,91.525,15.4
+segmented-only,segmented,False,False,False,2,2,,,0.0,0.0,50,60,12.5,6.78,96.9
+least-privilege-only,flat,True,False,False,3,3,50,,40.0,0.0,105,60,18.75,13.559,91.6
+immutable-backup-only,flat,False,True,False,15,15,50,,100.0,0.0,195,15,93.75,91.525,59.9
+resilient-reference,segmented,True,True,True,2,0,,47,0.0,0.0,38,0,12.5,6.78,97.1

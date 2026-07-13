@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "id": "resilient-reference",
+  "label": "Layered resilient reference",
+  "description": "Segmentation, least privilege, immutable recovery, signal detection, and automated containment operate together.",
+  "network_mode": "segmented",
+  "least_privilege": true,
+  "immutable_backup": true,
+  "detection_enabled": true,
+  "detection_threshold": 4,
+  "sensor_delay_seconds": 4,
+  "response_delay_seconds": 8,
+  "backup_interval_minutes": 15,
+  "unrecoverable_rpo_minutes": 480
+}

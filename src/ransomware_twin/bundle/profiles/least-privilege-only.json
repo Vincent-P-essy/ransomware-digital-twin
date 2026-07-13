@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "id": "least-privilege-only",
+  "label": "Least privilege only",
+  "description": "Flat connectivity remains, but the acquired identity scope cannot satisfy administrative access paths.",
+  "network_mode": "flat",
+  "least_privilege": true,
+  "immutable_backup": false,
+  "detection_enabled": false,
+  "detection_threshold": 1000,
+  "sensor_delay_seconds": 0,
+  "response_delay_seconds": 0,
+  "backup_interval_minutes": 60,
+  "unrecoverable_rpo_minutes": 480
+}

@@ -1,0 +1,15 @@
+{
+  "version": "1.0",
+  "id": "flat-baseline",
+  "label": "Flat network baseline",
+  "description": "Broad connectivity and privilege, mutable recovery points, and no automated detection-response.",
+  "network_mode": "flat",
+  "least_privilege": false,
+  "immutable_backup": false,
+  "detection_enabled": false,
+  "detection_threshold": 1000,
+  "sensor_delay_seconds": 0,
+  "response_delay_seconds": 0,
+  "backup_interval_minutes": 240,
+  "unrecoverable_rpo_minutes": 480
+}

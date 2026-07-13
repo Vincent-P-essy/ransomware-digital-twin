@@ -1,0 +1,12 @@
+{
+  "version": "1.0",
+  "topology": "topology.json",
+  "scenario": "scenario.json",
+  "profiles": [
+    "profiles/flat-baseline.json",
+    "profiles/segmented-only.json",
+    "profiles/least-privilege-only.json",
+    "profiles/immutable-backup-only.json",
+    "profiles/resilient-reference.json"
+  ]
+}
