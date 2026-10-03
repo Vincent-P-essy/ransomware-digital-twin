@@ -14,11 +14,11 @@ reference.
 > data leaves the process. “Encryption”, “exfiltration”, and “backup destruction”
 > are names for in-memory state transitions and numeric counters only.
 
-## Running example
+## Dashboard Preview
 
-![ransomware-digital-twin running locally](docs/screenshots/application.png)
+![Controlled comparison of simulated resilience architectures](docs/screenshots/dashboard-overview.png)
 
-Comparison of the baseline network and the layered-resilience scenario, using the bundled simulation. [Commands and test results](docs/verification.md).
+Controlled simulation using the repository’s example environments and profiles.
 
 ## Measured reference experiment
 
